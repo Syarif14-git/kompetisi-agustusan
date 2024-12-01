@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "quicksand";
+  scroll-padding-top: 70px;
+}
+body {
+  position: relative;
+  margin: auto;
+}
+header {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 2px 0 5px gray;
+}
+header .logo {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+header .logo img {
+  width: 50px;
+}
+header .logo h1 {
+  margin-block: auto;
+  color: rgb(51, 42, 95);
+}
+header ul.navigasi {
+  display: flex;
+  list-style: none;
+  flex: 1.1;
+  justify-content: space-around;
+}
+header ul.navigasi li {
+  margin: auto;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  padding: 5px 10px;
+  border-radius: 99px;
+}
+header ul.navigasi li:hover {
+  background-color: rgb(247, 124, 124);
+  box-shadow: 0 6px 0px red;
+  transition: 0.1s;
+}
+header ul.navigasi li:active {
+  box-shadow: 0 3px 0px red;
+  transform: translateY(3px);
+}
+header ul.navigasi li:hover a {
+  color: #fff;
+}
+header ul.navigasi li a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+  min-height: 90vh;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10vw;
+  background-image: url(../IMG/background-rain-drops-close-up.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.content .content-deskripsi {
+  flex: 1.4;
+  order: 2;
+  padding: 50px;
+}
+.content .content-image {
+  flex: 1;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-deskripsi {
+  color: white;
+}
+.content .content-deskripsi h1 {
+  font-size: 2.5vw;
+}
+.conten .content-deskripsi h2 {
+  margin-block: 20px;
+}
+.content-deskripsi button {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 99px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  color: red;
+  background-color: #fff;
+  transition: 0.3s;
+  margin-block: 20px;
+  box-shadow: 0 0px 2px red;
+}
+.content-deskripsi button:hover {
+  border-color: #fff;
+  background-color: transparent;
+  color: white;
+}
+.content-deskripsi button:hover {
+  box-shadow: 0 0px 5px red;
+  transform: scale(0.9px);
+}
+.content .content-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  animation: animasi 3s linear infinite alternate;
+  position: relative;
+}
+
+.bidang-keahlian {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+  background-image: url(../IMG/national-peru-flag-arrangement.jpg);
+  background-size: cover;
+  background-position: center;
+  color: red;
+}
+.bidang-keahlian h1,
+.headline-event h1 {
+  width: fit-content;
+  border-bottom: 1px solid red;
+  padding: 5px;
+}
+.bidang-keahlian h4,
+.headline-event h4 {
+  width: fit-content;
+  color: rgba(255, 0, 0, 0.678);
+}
+.bidang-keahlian .scroll-box {
+  padding-block: 100px;
+  width: 100%; /* Lebar container, sesuaikan sesuai kebutuhan */
+  overflow: hidden; /* Sembunyikan konten yang melampaui batas container */
+  position: relative; /* Posisi relative untuk mengatur elemen anak */
+  white-space: nowrap; /* Mencegah wrapping teks */
+  /* overflow: auto; */
+}
+.bidang-keahlian .scroll-box .scroll {
+  display: inline-block; /* Membuat konten menjadi satu baris */
+  animation: scroll-left 10s linear infinite;
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.bidang-keahlian .scroll-box .scroll .img {
+  display: inline-block; /* Item menjadi baris */
+  width: 250px; /*Lebar setiap item */
+  margin-right: 20px; /* Spasi antar item */
+  background-color: #f0f0f0; /* Warna latar belakang item */
+  border: 1px solid #ccc; /* Border item */
+  text-align: center; /* Teks di tengah item */
+  /* line-height: 100px; Vertikal center teks */
+  padding: 10px;
+  border-radius: 10px;
+  filter: grayscale(2);
+  position: relative;
+  transition: 0.3s;
+}
+.bidang-keahlian .scroll-box .scroll .img img {
+  width: 100%;
+  height: auto;
+}
+.bidang-keahlian .scroll .img:hover {
+  filter: grayscale(0);
+  box-shadow: -3px -3px 20px -5px red, 3px 3px 20px -5px red;
+  transform: scale(1.1);
+}
+.bidang-keahlian .scroll .img figcaption {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 5px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.bidang-keahlian .scroll .img:hover {
+  filter: grayscale(0);
+}
+.bidang-keahlian .scroll .img:hover figcaption {
+  opacity: 1;
+  height: max-content;
+  overflow: visible;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.headline-event {
+  color: red;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(242, 240, 247);
+  padding: 20px;
+}
+.event {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin: auto;
+  background-color: rgb(242, 240, 247);
+  color: red;
+}
+.form-event {
+  width: 40%;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid rgba(51, 42, 95, 0.699);
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 1rem;
+  margin-block: 20px;
+  color: red;
+  background-image: url(../img/national-peru-flag-arrangement.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.form-event .form-deskripsi {
+  flex: 2;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+  font-size: 80%;
+}
+.form-event .form-deskripsi:hover {
+  color: rgb(51, 42, 95);
+}
+.form-deskripsi h1,
+.form-deskripsi p {
+  padding: 10px 20px;
+}
+.form-deskripsi p {
+  text-align: justify;
+}
+.form-deskripsi button {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-inline: 20px;
+  border: 2px solid red;
+  color: red;
+  background-color: #fff;
+  box-shadow: 0 4px 0px red;
+  transition: 0.1s;
+}
+.form-event button:hover {
+  border-color: black;
+  color: black;
+  box-shadow: 0 4px 0px black;
+}
+.form-event button:active {
+  box-shadow: 0 2px 0px black;
+  transform: translateY(2px);
+}
+
+.form-event .form-image {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-event .form-image img {
+  width: 100%;
+  transition: 0.3s;
+  filter: grayscale(3);
+}
+.form-event .form-image img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  border-radius: 50px;
+}
+footer {
+  width: 100%;
+  background-color: rgb(242, 240, 247);
+  font-family: cursive;
+  padding: 10px 50px;
+  text-align: center;
+}
+footer .siswa,
+footer .sekolah {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(109, 107, 107);
+}
+footer p {
+  color: rgb(109, 107, 107);
+  margin: 10px;
+}
+footer hr {
+  width: 400px;
+  margin: auto;
+}
+aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+aside .social-media {
+  height: 100%;
+  display: flex;
+}
+aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+aside .social-media li {
+  list-style-type: none;
+}
+aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: red;
+  transition: all 0.1s ease-in-out;
+}
+aside .social-media li a:hover i.fa-youtube {
+  color: red;
+}
+aside .social-media li a:hover i.fa-linkedin-in {
+  color: rgb(0, 119, 255);
+}
+aside .social-media li a:hover i.fa-facebook {
+  color: rgb(0, 60, 255);
+}
+aside .social-media li a:hover i.fa-whatsapp {
+  color: rgb(4, 175, 41);
+}
+aside .social-media li a:hover i.fa-instagram {
+  color: rgb(230, 25, 35);
+}
+/* responsive */
+@media screen and (max-width: 1100px) {
+  .event {
+    flex-direction: column;
+  }
+  .event .form-event {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .form-event {
+    flex-direction: column;
+  }
+  .form-event .form-deskripsi {
+    order: 1;
+  }
+  .form-event .form-image {
+    order: 2;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content .content-image {
+    order: 1;
+  }
+  .content .content-deskripsi {
+    order: 2;
+    padding: 0;
+  }
+  .bidang-keahlian {
+    min-height: 60vh;
+  }
+  .content {
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .content .content-deskripsi {
+    color: red;
+  }
+  .content .content-deskripsi h1 {
+    font-size: 5vh;
+  }
+  footer .siswa,
+  footer .sekolah {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header ul.navigasi {
+    gap: 15px;
+  }
+  .menu-navigasi {
+    flex-direction: column;
+    position: absolute;
+  }
+  header .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    gap: 5px;
+    position: relative;
+  }
+  .menu input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  .menu span {
+    width: 100%;
+    height: 7px;
+    background-color: rgb(51, 42, 95);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .menu span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  .menu input:checked ~ span:nth-child(2) {
+    transform: rotate(47deg) translate(-1px, -1px) scale(1.1);
+    margin-left: 2px;
+  }
+  .menu span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  .menu input:checked ~ span:nth-child(4) {
+    transform: rotate(-47deg) translate(-1px) scale(1.1);
+    margin-left: 2px;
+  }
+  .menu input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+  }
+  footer h1 {
+    font-size: 3vw;
+  }
+}
+
+@keyframes animasi {
+  from {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 10px 2px rgba(255, 255, 255, 0.356));
+  }
+  to {
+    transform: translateY(10%);
+    filter: drop-shadow(0 -10px 2px rgba(255, 255, 255, 0.356));
+  }
+}
